@@ -151,7 +151,6 @@
 			<artifactId>mockito-all</artifactId>
 			<version>1.9.5</version>
 		</dependency>
-
 		<dependency>
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>
@@ -357,7 +356,6 @@
 			<artifactId>xom</artifactId>
 			<version>1.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -395,7 +393,6 @@
 			<artifactId>hibernate-search</artifactId>
 			<version>3.0.0.GA</version>
 		</dependency>
-
 		<!-- Spring Dependancies-->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -447,6 +444,5 @@
 			<artifactId>junit</artifactId>
 			<version>4.4</version>
 		</dependency>
-
 	</dependencies>
 </project>
