@@ -6,14 +6,9 @@ pipeline{
                 git changelog: false, credentialsId: 'sachin-git-cred', poll: false, url: 'https://github.com/sachin8403/spring3hibernate.git'
             }
         }
-        stage("Compilation"){
+        stage("validate"){
             steps{
-                sh 'mvn clean package'
-            }
-        }
-        stage("Test"){
-            steps{
-                sh 'mvn test'
+                sh 'mvn validate'
             }
         }
     }
