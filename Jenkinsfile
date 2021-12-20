@@ -1,6 +1,11 @@
 pipeline{
     agent any
     stages{
+        tage('Clone Code') {
+            steps {
+                git changelog: false, credentialsId: 'sachin-git-cred', poll: false, url: 'https://github.com/sachin8403/spring3hibernate.git'
+            }
+        }
         stage("Compilation"){
             steps{
                 sh 'mvn clean package'
