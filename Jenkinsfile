@@ -1,22 +1,17 @@
 pipeline{
     agent any
     stages{
-        stage('Clone Code') {
+        stage('Cloning remote repo') {
             steps {
                 git changelog: false, credentialsId: 'sachin-git-cred', poll: false, url: 'https://github.com/sachin8403/spring3hibernate.git'
             }
         }
-        stage("Compilation"){
+        stage("Build"){
             steps{
-                sh 'mvn clean package'
+                sh 'mvn -f /var/lib/jenkins/workspace/Test/task1/pom.xml test install package'
             }
         }
-        stage("Test"){
-            steps{
-                sh 'mvn test'
-            }
-        }
-    }
+    }    
     post{
         always{
             echo "========always========"
